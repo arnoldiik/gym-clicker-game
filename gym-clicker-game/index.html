@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #282c34;
+            color: white;
+        }
+        #game {
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Добро пожаловать в Gym Clicker</h1>
+        <p>Монеты: <span id="coins">0</span></p>
+        <button id="click">Кликни, чтобы заработать монеты</button>
+    </div>
+    <script>
+        let coins = 0;
+        document.getElementById('click').addEventListener('click', () => {
+            coins += 1;
+            document.getElementById('coins').innerText = coins;
+        });
+    </script>
+</body>
+</html>
